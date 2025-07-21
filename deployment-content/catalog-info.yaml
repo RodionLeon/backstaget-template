@@ -5,9 +5,6 @@ metadata:
   description: Развертывание оркестратора саг для продукта 
   annotations:
     github.com/project-slug: /RodionLeon/backstaget-template
-    - comp:saga
-    - type:temporal
-    - tpl:workflow
 spec:
   type: library
   owner: group:default
