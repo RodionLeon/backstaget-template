@@ -2,15 +2,14 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: test
-  description: Развертывание оркестратора саг для продукта ${{ values.sourceProduct }}
+  description: Развертывание оркестратора саг для продукта 
   annotations:
-    gitlab.com/project-slug: ${{ values.repoSlug | dump }}
-  tags:
+    github.com/project-slug: /RodionLeon/backstaget-template/
     - comp:saga
     - type:temporal
     - tpl:workflow
 spec:
   type: library
-  owner: ${{ values.owner | dump }}
+  owner: group:default
   lifecycle: production
-  system: ${{ values.sourceProduct | dump }}
+
