@@ -1,0 +1,12 @@
+apiVersion: v2
+
+name: ${{ values.sourceComponent }}
+type: application
+version: 0.1.0
+appVersion: 1.0.0
+
+dependencies:
+  - name: temporal-common
+    # https://gitlab.msp.komus.net/infra/core/temporal/temporal-common/-/blob/main/README.md
+    repository: https://gitlab.msp.komus.net/api/v4/projects/198/packages/helm/stable
+    version: 1.0.0

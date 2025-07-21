@@ -1,0 +1,20 @@
+global:
+  app:
+    name: dev-${{ values.deploymentLayer }}-${{ values.sourceComponent }}
+    env: "dev"
+    layer: ${{ values.deploymentLayer }}
+    cluster: "dev-bsl-cn-cl21"
+  anchors:
+    databaseSecret: &databaseSecret "dev-${{ values.deploymentLayer }}-${{ values.sourceComponent }}-database-secret"
+    elasticSecret: &elasticSecret "dev-${{ values.deploymentLayer }}-${{ values.sourceComponent }}-elastic-secret"
+
+temporal-common:
+  elasticsearch:
+    external: ${{ values.enableElastic }}
+  server:
+    frontend:
+      service:
+        port: ${{ values.frontendPort }}
+  web:
+    service:
+      port: ${{ values.webPort }}

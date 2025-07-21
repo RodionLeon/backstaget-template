@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ${{ values.deploymentLayer }}-${{ values.sourceSystem }}-${{ values.sourceComponent }}-cd
+  description: Развертывание оркестратора саг для продукта ${{ values.sourceProduct }}
+  annotations:
+    gitlab.com/project-slug: ${{ values.repoSlug | dump }}
+  tags:
+    - comp:saga
+    - type:temporal
+    - tpl:workflow
+spec:
+  type: library
+  owner: ${{ values.owner | dump }}
+  lifecycle: production
+  system: ${{ values.sourceProduct | dump }}
