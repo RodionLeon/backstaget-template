@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: ${{ (values.deploymentLayer + '-' + values.sourceSystem + '-' + values.sourceComponent + '-cd') | lower | replace(' ', '') | truncate(63, end='') }}
+  name: test
   description: Развертывание оркестратора саг для продукта ${{ values.sourceProduct }}
   annotations:
     gitlab.com/project-slug: ${{ values.repoSlug | dump }}
