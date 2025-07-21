@@ -4,7 +4,7 @@ metadata:
   name: test
   description: Развертывание оркестратора саг для продукта 
   annotations:
-    github.com/project-slug: /RodionLeon/backstaget-template/
+    github.com/project-slug: /RodionLeon/backstaget-template
     - comp:saga
     - type:temporal
     - tpl:workflow
